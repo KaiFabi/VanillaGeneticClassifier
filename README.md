@@ -1,2 +1,2 @@
-# genetic_classifier
+# genetic-classifier
 A vanilla genetic classifier
