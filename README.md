@@ -17,8 +17,7 @@ mut_glb = 0.001
 epochs = 100
 ````
 
-In order to get a better understanding of what the genetic optimizer has learned during its training, the weights can be visualized. It turns out that weights are learned that look like handwritten digits themselves. Interestingly, the weights learned tend to be an average of the training data.
-
+In order to get a better understanding of what the genetic optimizer has learned during its training, the weights can be visualized. It turns out that weights are learned that look like handwritten digits themselves. Interestingly, the weights learned tend to be an average of the training data. The upper and lower rows show the weights learned and the mean values of the training data for each class, respectively.
 
 <div align="center">
 <img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/gml_loc_001_glb_001_epoch_90.png" width="320">
