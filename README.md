@@ -19,6 +19,21 @@ epochs = 100
 
 The genetic classifier was trained for 100 epochs, with a population size of 8, and a mini batch size of 64 images. Both, the local and global mutation rate was set to 0.01. The mutation rates are similar to the learning rate of any other recursive optimizer such as the gradient descent optimizer. The classifier trained on the MNIST dataset achieved a test accuracy of 88.05 % while the classifier trained on the more complex Fashion-MNIST dataset achieved a test accuracy of 79.94 %. Not bad for a genetic optimizer with only 7840 weights.
 
+The resulting graphs show the loss and accuracy for the evaluation dataset.
+
+**MNIST:**
+<div align="center">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/mnist_eval_loss.png" height="320">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/mnist_eval_accuracy.png" height="320">
+</div>
+
+**Fashion-MNIST:**
+<div align="center">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/fmnist_eval_loss.png" height="320">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/fmnist_eval_accuracy.png" height="320">
+</div>
+
+
 In order to get a better understanding of what the genetic optimizer has learned during its training, the weights can be visualized. It turns out that weights are learned that look like handwritten digits themselves. Interestingly, the weights learned tend to be an average of the training data. The upper and lower rows show the weights learned and the mean values of the training data for each class, respectively.
 
 <div align="center">
