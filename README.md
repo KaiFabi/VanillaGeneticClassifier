@@ -19,7 +19,7 @@ epochs = 100
 
 The genetic classifier was trained for 100 epochs, with a population size of 8, and a mini batch size of 64 images. Both, the local and global mutation rate was set to 0.01. The mutation rates are similar to the learning rate of any other recursive optimizer such as the gradient descent optimizer. The classifier trained on the MNIST dataset achieved a test accuracy of 88.05 % while the classifier trained on the more complex Fashion-MNIST dataset achieved a test accuracy of 79.94 %. Not bad for a genetic optimizer with only 7840 weights.
 
-The resulting graphs show the loss and accuracy for the evaluation dataset.
+The resulting graphs show the loss and accuracy for the evaluation dataset of the MNIST and Fashion-MNIST dataset for differnt combinations of local and global mutation rates.
 
 **MNIST:**
 <div align="center">
