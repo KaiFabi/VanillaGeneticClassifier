@@ -22,8 +22,8 @@ In order to get a better understanding of what the genetic optimizer has learned
 
 <div align="center">
 <img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/gml_loc_001_glb_001_epoch_90.png" width="320">
-<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/gml_mnist_mean.png" width="320">
-
 <img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/gml_loc_001_glb_001_epoch_90.png" width="320">
+  
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/gml_mnist_mean.png" width="320">
 <img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/gml_fmnist_mean.png" width="320">
 </div>
