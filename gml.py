@@ -10,7 +10,7 @@ np.random.seed(seed=73214)
 # Multilayer Perceptron Class
 class GeneticClassifier(object):
 
-    def __init__(self, n_classes, n_input, population):
+    def __init__(self, n_classes, n_input, population, mut_glb, mut_loc):
 
         # Population size 
         self.population = population
