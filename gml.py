@@ -31,7 +31,7 @@ class GeneticClassifier(object):
                 # Get batch of random training samples
                 x_batch, y_batch = x_train[idx], y_train[idx]
 
-                for k in range(population):
+                for k in range(self.population):
                     # Compute loss
                     U = expit(x_batch.dot(self.W[k].T)) - y_batch
                     loss[k] = np.sum(U*U)
@@ -40,15 +40,14 @@ class GeneticClassifier(object):
                 best_idx = np.argmin(loss, axis=0)
 
                 # Pass genes to next generation # TODO: Combine with next loop
-                for k in range(population):
+                for k in range(self.population):
                     if k != best_idx:
                         self.W[k] = self.W[best_idx]
 
                 # Mutate genes
-                for k in range(population):
+                for k in range(self.population):
                     if k != best_idx:
                         self.W[k] = self.W[k] + self.mut_loc*np.random.uniform(-1,1,size=(n_classes, n_input))*(np.random.rand(n_classes, n_input)<self.mut_glb)
-                        #self.W[k] = self.W[k] + self.mut_loc*np.random.normal(size=(n_classes, n_input))*(np.random.rand(n_classes, n_input)<self.mut_glb)
  
             if epoch % 1 == 0:
                 self.prediction(x_eval, y_eval, best_idx, epoch, mode="eval")
