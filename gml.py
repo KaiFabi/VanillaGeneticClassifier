@@ -93,5 +93,5 @@ mut_glb = 0.01
 epochs = 100
 
 # Run training
-gml = GeneticClassifier(n_classes, n_input, population)
+gml = GeneticClassifier(n_classes, n_input, population, mut_glb, mut_loc)
 gml.optimize(x_train, y_train, x_eval, y_eval, x_test, y_test, epochs, batch_size, mut_loc, mut_glb)
