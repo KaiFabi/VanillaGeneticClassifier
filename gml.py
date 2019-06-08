@@ -20,7 +20,7 @@ class GeneticClassifier(object):
         # Initialize weights
         self.W = [1e-4*np.random.uniform(-1,1,size=(n_classes, n_input)) for k in range(population)]
 
-    def optimize(self, x_train, y_train, x_eval, y_eval, x_test, y_test, epochs, batch_size, mut_loc, mut_glb):
+    def optimize(self, x_train, y_train, x_eval, y_eval, x_test, y_test, epochs, batch_size):
         
         loss = np.zeros((self.population))
         for epoch in range(epochs):
