@@ -46,7 +46,7 @@ In order to get a better understanding of what the genetic optimizer has learned
 
 **Hyperparameter optimization**
 
-There are several hyperparameters that influence the genetic classifier's performance. Here, the mutation rates will be considered more closely. A good choice of mutation rates is essential for a genetic algorithm. Good mutation rates can be found, for example, by trial and error, or by a grid search approach.
+There are several hyperparameters that influence the genetic classifier's performance. Here, the mutation rates will be considered more closely. A good choice of mutation rates is essential for a genetic algorithm. Good mutation rates can be found, for example, by trial and error, or by a brute force grid search approach. Here are two example for the MNIST dataset.
 
 Alternatively, it is possible to build another genetic hyperparameter optimization algorithm on top of the genetic classifier algorithm.
 
