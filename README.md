@@ -52,8 +52,16 @@ The result of such a grid search are well suited to be visualized. The results o
 
 <div align="center">
 <img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/loss_accuracy_03.png" height="320">
+</div>
+
+It can be seen that the algorithm reacts more sensitively to changes in the global mutation rate. Since the search range is still too large, the search range `[0.0001, 0.05]` and `[0.0001, 0.01]` is now examined more closely.
+
+<div align="center">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/loss_accuracy_03.png" height="320">
 <img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/loss_accuracy_03.png" height="320">
 </div>
+
+The grid search approach delivers the values `0.001`and `0.001` for the local and global mutation rates, respectively.
 
 Alternatively, it is possible to build another genetic hyperparameter optimization algorithm on top of the genetic classifier algorithm.
 
