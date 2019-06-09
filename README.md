@@ -48,6 +48,13 @@ In order to get a better understanding of what the genetic optimizer has learned
 
 There are several hyperparameters that influence the genetic classifier's performance. Here, the mutation rates will be considered more closely. A good choice of mutation rates is essential for a genetic algorithm. Good mutation rates can be found, for example, by trial and error, or by a brute force grid search approach. Here are two example for the MNIST dataset.
 
+The result of such a grid search are well suited to be visualized. The results of a grid search for both mutation parameters from `[0.0001, 0.3]` are shown below:
+
+<div align="center">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/loss_accuracy_03.png" height="320">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/loss_accuracy_03.png" height="320">
+</div>
+
 Alternatively, it is possible to build another genetic hyperparameter optimization algorithm on top of the genetic classifier algorithm.
 
 Especially the last two approaches to find a good set of mutation rates can be very time consuming.
