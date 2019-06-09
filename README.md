@@ -13,7 +13,7 @@ This genetic optimizer takes the following parameters for training: population s
 population = 8
 batch_size = 64
 mut_loc = 0.01
-mut_glb = 0.001
+mut_glb = 0.01
 epochs = 100
 ````
 
@@ -43,3 +43,13 @@ In order to get a better understanding of what the genetic optimizer has learned
 <img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/gml_mnist_mean.png" width="320">
 <img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/gml_fmnist_mean.png" width="320">
 </div>
+
+**Hyperparameter optimization**
+
+There are several hyperparameters that influence the genetic classifier's performance. Here, the mutation rates will be considered more closely. A good choice of mutation rates is essential for a genetic algorithm. Good mutation rates can be found, for example, by trial and error, or by a grid search approach.
+
+Alternatively, it is possible to build another genetic hyperparameter optimization algorithm on top of the genetic classifier algorithm.
+
+Especially the last two approaches to find a good set of mutation rates can be very time consuming.
+
+Using genetic algorithms to optimize a large number of weights is not very efficient. Nevertheless, these algorithms are great to play around with. 
