@@ -63,7 +63,7 @@ It can be seen that the algorithm reacts more sensitively to changes in the glob
 
 The traditional grid search approach delivers the values `0.0118`and `0.0098` for the local and global mutation rates, respectively.
 
-Alternatively, it is possible to build another genetic hyperparameter optimization algorithm on top of the genetic classifier algorithm.
+Alternatively, it is possible to build another genetic hyperparameter optimization algorithm on top of the genetic classifier algorithm. The algorithm for this can be programmed in a few lines. Here is a draft of such an implementation:
 
 ```python
 n_pop = 3
@@ -77,10 +77,9 @@ while True:
         gml = GeneticClassifier(n_classes, n_input, glb, loc, population=4)
         loss_[k], accuracy_[k] = gml.optimize(x_train, y_train, x_eval, y_eval, x_test, y_test, epochs=40, batch_size=128)
 
+    # Determine best child
     fitness_ = accuracy_ / loss_
     best = np.argmax(fitness_, axis=0)
-
-    print("best_glb: {} best_loc: {} accuracy: {} loss: {} fitness: {}".format(mut_glb_[best], mut_loc_[best], accuracy_[best], loss_[best], fitness_[best]), flush=True)
 
     # Pass genes to next generation
     for k in range(n_pop):
@@ -90,9 +89,6 @@ while True:
     # Mutate genes
     mut_loc_ = mut_loc_ + 0.05 * np.random.rand(n_pop) * np.random.uniform(-1,1,size=(n_pop))
     mut_glb_ = mut_glb_ + 0.05 * np.random.rand(n_pop) * np.random.uniform(-1,1,size=(n_pop))
-
-    mut_loc_ = np.clip(mut_loc_, 1e-6, 1)
-    mut_glb_ = np.clip(mut_glb_, 0.00013, 1)
 ````
 
 <div align="center">
