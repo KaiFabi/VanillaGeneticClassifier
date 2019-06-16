@@ -61,9 +61,14 @@ It can be seen that the algorithm reacts more sensitively to changes in the glob
 <img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/loss_accuracy_test_0025.png" height="320">
 </div>
 
-The grid search approach delivers the values `0.0118`and `0.0098` for the local and global mutation rates, respectively.
+The traditional grid search approach delivers the values `0.0118`and `0.0098` for the local and global mutation rates, respectively.
 
 Alternatively, it is possible to build another genetic hyperparameter optimization algorithm on top of the genetic classifier algorithm.
+
+<div align="center">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/hps_loss_accuracy.png" height="320">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/hps_global_local.png" height="320">
+</div>
 
 Especially the last two approaches to find a good set of mutation rates can be very time consuming.
 
