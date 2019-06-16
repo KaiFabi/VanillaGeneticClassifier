@@ -65,6 +65,36 @@ The traditional grid search approach delivers the values `0.0118`and `0.0098` fo
 
 Alternatively, it is possible to build another genetic hyperparameter optimization algorithm on top of the genetic classifier algorithm.
 
+```python
+n_pop = 3
+mut_loc_, mut_glb_ = 0.5*np.ones((n_pop)) + 1e-4*np.random.uniform(-1,1,n_pop), 0.5*np.ones((n_pop)) + 1e-4*np.random.uniform(-1,1,n_pop)
+loss_, accuracy_ = np.zeros((n_pop)), np.zeros((n_pop))
+
+while True:
+    for k in range(n_pop):
+        np.random.seed(seed=73214)
+        loc, glb = mut_loc_[k], mut_glb_[k]
+        gml = GeneticClassifier(n_classes, n_input, glb, loc, population=4)
+        loss_[k], accuracy_[k] = gml.optimize(x_train, y_train, x_eval, y_eval, x_test, y_test, epochs=40, batch_size=128)
+
+    fitness_ = accuracy_ / loss_
+    best = np.argmax(fitness_, axis=0)
+
+    print("best_glb: {} best_loc: {} accuracy: {} loss: {} fitness: {}".format(mut_glb_[best], mut_loc_[best], accuracy_[best], loss_[best], fitness_[best]), flush=True)
+
+    # Pass genes to next generation
+    for k in range(n_pop):
+        mut_loc_[k] = mut_loc_[best]
+        mut_glb_[k] = mut_glb_[best]
+
+    # Mutate genes
+    mut_loc_ = mut_loc_ + 0.05 * np.random.rand(n_pop) * np.random.uniform(-1,1,size=(n_pop))
+    mut_glb_ = mut_glb_ + 0.05 * np.random.rand(n_pop) * np.random.uniform(-1,1,size=(n_pop))
+
+    mut_loc_ = np.clip(mut_loc_, 1e-6, 1)
+    mut_glb_ = np.clip(mut_glb_, 0.00013, 1)
+````
+
 <div align="center">
 <img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/hps_global_local.png" height="320">
 <img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/hps_loss_accuracy.png" height="320">
