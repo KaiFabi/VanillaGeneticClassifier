@@ -66,10 +66,10 @@ The traditional grid search approach delivers the values `0.0118`and `0.0098` fo
 Alternatively, it is possible to build another genetic hyperparameter optimization algorithm on top of the genetic classifier algorithm.
 
 <div align="center">
-<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/hps_loss_accuracy.png" height="320">
 <img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/hps_global_local.png" height="320">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/hps_loss_accuracy.png" height="320">
 </div>
 
-Especially the last two approaches to find a good set of mutation rates can be very time consuming.
+The results of the genetic hyperparameter search are comparable to those of the grid search method. After about 80 iterations, both hyperparameters converge and lie in the range between 0.01 and 0.03. While grid search took more than 48 hours, the genetic approach took only about 6 hours to find reasonable hyperparameters.
 
 Using genetic algorithms to optimize a large number of weights is not very efficient. Nevertheless, these algorithms are great to play around with. 
