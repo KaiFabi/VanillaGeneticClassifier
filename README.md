@@ -57,8 +57,8 @@ The result of such a grid search are well suited to be visualized. The results o
 It can be seen that the algorithm reacts more sensitively to changes in the global mutation rate. Since the search range is still too large, the search range `[0.0001, 0.05]` and `[0.0001, 0.025]` can be examined more closely.
 
 <div align="center">
-<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/loss_accuracy_005.png" height="320">
-<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/loss_accuracy_0025.png" height="320">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/loss_accuracy_test_005.png" height="320">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/loss_accuracy_test_0025.png" height="320">
 </div>
 
 The grid search approach delivers the values `0.0118`and `0.0098` for the local and global mutation rates, respectively.
