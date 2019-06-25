@@ -92,7 +92,7 @@ while True:
 ````
 
 <div align="center">
-<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/hps_global_local.png" height="320">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/results/hps_global_local.png" height="320">
 <img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/hps_loss_accuracy.png" height="320">
 </div>
 
