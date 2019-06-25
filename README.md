@@ -23,25 +23,25 @@ The resulting graphs show the loss and accuracy for the evaluation dataset of th
 
 **MNIST:**
 <div align="center">
-<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/mnist_eval_loss.png" height="320">
-<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/mnist_eval_accuracy.png" height="320">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/results/mnist_eval_loss.png" height="320">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/results/mnist_eval_accuracy.png" height="320">
 </div>
 
 **Fashion-MNIST:**
 <div align="center">
-<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/fmnist_eval_loss.png" height="320">
-<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/fmnist_eval_accuracy.png" height="320">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/results/fmnist_eval_loss.png" height="320">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/results/fmnist_eval_accuracy.png" height="320">
 </div>
 
 
 In order to get a better understanding of what the genetic optimizer has learned during its training, the weights can be visualized. It turns out that weights are learned that look like handwritten digits themselves. Interestingly, the weights learned tend to be an average of the training data. The upper and lower rows show the weights learned and the mean values of the training data for each class, respectively.
 
 <div align="center">
-<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/gml_weights_mnist.png" width="320">
-<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/gml_weights_fmnist.png" width="320">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/results/gml_weights_mnist.png" width="320">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/results/gml_weights_fmnist.png" width="320">
   
-<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/gml_mnist_mean.png" width="320">
-<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/gml_fmnist_mean.png" width="320">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/results/gml_mnist_mean.png" width="320">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/results/gml_fmnist_mean.png" width="320">
 </div>
 
 **Hyperparameter optimization**
@@ -51,14 +51,14 @@ There are several hyperparameters that influence the genetic classifier's perfor
 The result of such a grid search are well suited to be visualized. The results of a grid search for both mutation parameters from `[0.0001, 0.3]` are shown below:
 
 <div align="center">
-<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/loss_accuracy_03.png" height="320">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/results/loss_accuracy_03.png" height="320">
 </div>
 
 It can be seen that the algorithm reacts more sensitively to changes in the global mutation rate. Since the search range is still too large, the search range `[0.0001, 0.05]` and `[0.0001, 0.025]` can be examined more closely.
 
 <div align="center">
-<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/loss_accuracy_test_005.png" height="320">
-<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/loss_accuracy_test_0025.png" height="320">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/results/loss_accuracy_test_005.png" height="320">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/results/loss_accuracy_test_0025.png" height="320">
 </div>
 
 The traditional grid search approach delivers the values `0.0118`and `0.0098` for the local and global mutation rates, respectively.
@@ -93,7 +93,7 @@ while True:
 
 <div align="center">
 <img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/results/hps_global_local.png" height="320">
-<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/hps_loss_accuracy.png" height="320">
+<img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/results/hps_loss_accuracy.png" height="320">
 </div>
 
 The results of the genetic hyperparameter search are comparable to those of the grid search method. After about 80 iterations, both hyperparameters converge and lie in the range between 0.01 and 0.03. While grid search took more than 48 hours, the genetic approach took only about 6 hours to find reasonable hyperparameters.
