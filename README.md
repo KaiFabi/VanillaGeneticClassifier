@@ -17,9 +17,9 @@ mut_glb = 0.01
 epochs = 100
 ````
 
-The genetic classifier was trained for 100 epochs, with a population size of 8, and a mini batch size of 64 images. Both, the local and global mutation rate was set to 0.01. The mutation rates are similar to the learning rate of any other recursive optimizer such as the gradient descent optimizer. The classifier trained on the MNIST dataset achieved a test accuracy of 88.05 % while the classifier trained on the more complex Fashion-MNIST dataset achieved a test accuracy of 79.94 %. Not bad for a genetic optimizer with only 7840 weights.
+The genetic classifier was trained for 100 epochs, with a population size of 8, and a mini batch size of 64 images. Both, the local and global mutation rate were set to 0.01. The mutation rates are similar to the learning rate of any other recursive optimizer such as the gradient descent optimizer. The classifier trained on the MNIST dataset achieved a test accuracy of 88.05 % while the classifier trained on the more complex Fashion-MNIST dataset achieved a test accuracy of 79.94 %. Not bad for a genetic optimizer with only 7840 weights.
 
-The resulting graphs show the loss and accuracy for the evaluation dataset of the MNIST and Fashion-MNIST dataset for differnt combinations of local and global mutation rates.
+The resulting graphs show the loss and accuracy for the evaluation dataset of the MNIST and Fashion-MNIST dataset for different combinations of local and global mutation rates.
 
 **MNIST:**
 <div align="center">
@@ -34,7 +34,7 @@ The resulting graphs show the loss and accuracy for the evaluation dataset of th
 </div>
 
 
-In order to get a better understanding of what the genetic optimizer has learned during its training, the weights can be visualized. It turns out that weights are learned that look like handwritten digits themselves. Interestingly, the weights learned tend to be an average of the training data. The upper and lower rows show the weights learned and the mean values of the training data for each class, respectively.
+In order to get a better understanding of what the genetic optimizer has learned during its training, the weights can be visualized. It turns out that weights that are learned look like handwritten digits themselves. Interestingly, the weights learned tend to be an average of the training data. The upper and lower rows show the weights learned and the mean values of the training data for each class, respectively.
 
 <div align="center">
 <img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/results/gml_weights_mnist.png" width="320">
@@ -54,14 +54,14 @@ The result of such a grid search are well suited to be visualized. The results o
 <img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/results/loss_accuracy_03.png" height="320">
 </div>
 
-It can be seen that the algorithm reacts more sensitively to changes in the global mutation rate. Since the search range is still too large, the search range `[0.0001, 0.05]` and `[0.0001, 0.025]` can be examined more closely.
+It can be seen that the algorithm reacts more sensitively to changes in the global mutation rate. Since the search range is still too large, the search ranges `[0.0001, 0.05]` and `[0.0001, 0.025]` can be examined more closely.
 
 <div align="center">
 <img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/results/loss_accuracy_test_005.png" height="320">
 <img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/results/loss_accuracy_test_0025.png" height="320">
 </div>
 
-The traditional grid search approach delivers the values `0.0118`and `0.0098` for the local and global mutation rates, respectively.
+The traditional grid search approach delivers the values `0.0118` and `0.0098` for the local and global mutation rates, respectively.
 
 Alternatively, it is possible to build another genetic hyperparameter optimization algorithm on top of the genetic classifier algorithm. The algorithm for this can be programmed in a few lines. Here is a draft of such an implementation:
 
