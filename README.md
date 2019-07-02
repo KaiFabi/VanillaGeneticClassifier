@@ -34,7 +34,7 @@ The resulting graphs show the loss and accuracy for the evaluation dataset of th
 </div>
 
 
-In order to get a better understanding of what the genetic optimizer has learned during its training, the weights can be visualized. It turns out that weights that are learned look like handwritten digits themselves. Interestingly, the weights learned tend to be an average of the training data. The upper and lower rows show the weights learned and the mean values of the training data for each class, respectively.
+In order to get a better understanding of what the genetic optimizer has learned during its training, the weights can be visualized. It turns out that weights that are learned look like handwritten digits themselves. Interestingly, learned weights look similar to the average of the training data. The upper and lower rows show the learned weights and the mean values of the training data for each class, respectively.
 
 <div align="center">
 <img src="https://github.com/KaiFabi/VanillaGeneticClassifier/blob/master/results/gml_weights_mnist.png" width="320">
@@ -98,4 +98,4 @@ while True:
 
 The results of the genetic hyperparameter search are comparable to those of the grid search method. After about 80 iterations, both hyperparameters converge and lie in the range between 0.01 and 0.03. While grid search took more than 48 hours, the genetic approach took only about 6 hours to find reasonable hyperparameters.
 
-Using genetic algorithms to optimize a large number of weights is not very efficient. Nevertheless, these algorithms are great to play around with. 
+However, using genetic algorithms to optimize a large number of weights is not very efficient. Nevertheless, these algorithms have a wide range of applications and are great to play around with.
